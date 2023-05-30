@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 {
 	int i, pd = 0, pdc = 0;
 	int params, width, precision, size, bi = 0;
-	va_vl vl;
+	va_list vl;
 	char buffer[BUFF_SIZE];
 
 	if (format == NULL)
