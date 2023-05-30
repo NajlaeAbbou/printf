@@ -15,9 +15,7 @@ int get_precision(const char *format, int *i, va_list vl)
 
 	if (format[ci] != '.')
 		return (precision);
-
 	precision = 0;
-
 	for (ci += 1; format[ci] != '\0'; ci++)
 	{
 		if (_isdigit(format[ci]))
@@ -34,8 +32,6 @@ int get_precision(const char *format, int *i, va_list vl)
 		else
 			break;
 	}
-
 	*i = ci - 1;
-
 	return (precision);
 }
