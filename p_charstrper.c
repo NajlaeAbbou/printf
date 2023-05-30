@@ -11,7 +11,6 @@ int print_char(va_list v, char f[],
 {
 	char c = va_arg(v, int);
 
-	UNUSED(v);
 	UNUSED(f);
 	UNUSED(params);
 	UNUSED(width);
