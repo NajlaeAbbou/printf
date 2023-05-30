@@ -81,12 +81,6 @@ int print_string(va_list v, char f[],
 int print_percent(va_list v, char f[],
 	int params, int width, int precision, int size)
 {
-	UNUSED(v);
-	UNUSED(f);
-	UNUSED(params);
-	UNUSED(width);
-	UNUSED(precision);
-	UNUSED(size);
 	return (write(1, "%%", 1));
 }
 
