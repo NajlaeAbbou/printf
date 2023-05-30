@@ -7,15 +7,16 @@
  * Return: number of chars to print
  */
 int print_char(va_list v, char f[],
-	int params, int width, int precision)
+	int params, int width, int precision, int size)
 {
 	char c = va_arg(v, int);
 	UNUSED(f);
 	UNUSED(params);
 	UNUSED(width);
 	UNUSED(precision);
+	UNUSED(size);
 
-	return (writechar(c, f, params, width, precision));
+	return (writechar(c, f, params, width, precision, size));
 }
 /* task 0 */
 
@@ -26,7 +27,7 @@ int print_char(va_list v, char f[],
  * Return: number of chars to print
  */
 int print_string(va_list v, char f[],
-	int params, int width, int precision)
+	int params, int width, int precision, int size)
 {
 	int length = 0, i;
 	char *s = va_arg(v, char *);
@@ -35,6 +36,7 @@ int print_string(va_list v, char f[],
 	UNUSED(params);
 	UNUSED(width);
 	UNUSED(precision);
+	UNUSED(size);
 	if (s == NULL)
 	{
 		s = "(null)";
@@ -76,9 +78,15 @@ int print_string(va_list v, char f[],
  * Return: number of chars
  */
 
-int print_percent()
+int print_percent(va_list v, char f[],
+	int params, int width, int precision, int size)
 {
-	
+	UNUSED(v);
+	UNUSED(f);
+	UNUSED(params);
+	UNUSED(width);
+	UNUSED(precision);
+	UNUSED(size);
 	return (write(1, "%%", 1));
 }
 
