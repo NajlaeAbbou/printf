@@ -26,6 +26,5 @@ int get_params(const char *format, int *i)
 			break;
 	}
 	*i = curr_i - 1;
-
 	return (params);
 }
