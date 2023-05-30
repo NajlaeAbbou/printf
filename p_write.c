@@ -7,13 +7,12 @@
  * Return: Number of chars printed.
  */
 int writechar(char c, char f[],
-	int params, int width, int precision, int size)
+	int params, int width, int precision)
 {
 	int i = 0;
 	char padd = ' ';
 
 	UNUSED(precision);
-	UNUSED(size);
 	UNUSED(f);
 	UNUSED(params);
 	UNUSED(width);
@@ -50,12 +49,10 @@ int writechar(char c, char f[],
  * Return: Number of chars printed.
  */
 int writenumber(int isnegative, int ind, char f[],
-	int params, int width, int precision, int size)
+	int params, int width, int precision)
 {
 	int length = BUFF_SIZE - ind - 1;
 	char padd = ' ', ch = 0;
-
-	UNUSED(size);
 
 	if ((params & ZERO) && !(params & MINUS))
 		padd = '0';
@@ -131,15 +128,13 @@ int writenum(int ind, char f[],
  * @params: params specifiers
  * Return: Number chars.
  */
-int writeunsgnd(int isnegative, int ind,
+int writeunsgnd(int ind,
 	char f[],
-	int params, int width, int precision, int size)
+	int params, int width, int precision)
 {
 	int length = BUFF_SIZE - ind - 1, i = 0;
 	char padd = ' ';
 
-	UNUSED(isnegative);
-	UNUSED(size);
 
 	if (precision == 0 && ind == BUFF_SIZE - 2 && f[ind] == '0')
 		return (0);
@@ -224,3 +219,5 @@ int writeadress(char f[], int ind, int length,
 		f[--ind] = extra_c;
 	return (write(1, &f[ind], BUFF_SIZE - ind - 1));
 }
+
+

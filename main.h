@@ -53,11 +53,10 @@ va_list list, char f[], int params, int width, int precision, int size);
 
 /* print chars and strings task 0*/
 int print_char(va_list vl, char f[],
-	int params, int width, int precision, int size);
+	int params, int width, int precision);
 int print_string(va_list vl, char f[],
-	int params, int width, int precision, int size);
-int print_percent(va_list vl, char f[],
-	int params, int width, int precision, int size);
+	int params, int width, int precision);
+int print_percent();
 
 /* print numbers task 1*/
 int print_int(va_list vl, char f[],
@@ -100,16 +99,14 @@ int print_rot13(va_list vl, char f[],
 
 /* width handler */
 int writechar(char c, char f[],
-	int params, int width, int precision, int size);
+	int params, int width, int precision);
 int writenumber(int is_positive, int ind, char f[],
-	int params, int width, int precision, int size);
+	int params, int width, int precision);
 int writenum(int ind, char bff[], int params, int width, int precision,
 	int length, char padd, char ec);
 int writeadress(char f[], int ind, int length,
 	int width, int params, char padd, char ec, int padd_start);
-int writeunsgnd(int is_negative, int ind,
-char f[],
-	int params, int width, int precision, int size);
+int writeunsgnd(int ind,char f[], int params, int width, int precision);
 int _isprintable(char);
 int _appendhexacode(char, char[], int);
 int _isdigit(char);
