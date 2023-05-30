@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * get_size - Handle the following length modifiers
  * for non-custom conversion specifiers:
@@ -17,11 +16,9 @@ int get_size(const char *format, int *i)
 		size = LONG;
 	else if (format[curr_i] == 'h')
 		size = SHORT;
-
 	if (size == 0)
 		*i = curr_i - 1;
 	else
 		*i = curr_i;
-
 	return (size);
 }
