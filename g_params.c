@@ -22,11 +22,9 @@ int get_params(const char *format, int *i)
 				params |= params_ARR[j];
 				break;
 			}
-
 		if (params_CH[j] == 0)
 			break;
 	}
-
 	*i = curr_i - 1;
 
 	return (params);
