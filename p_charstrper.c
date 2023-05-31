@@ -12,10 +12,12 @@ int print_char(va_list v, char f[],
 	char c = va_arg(v, int);
 
 	UNUSED(f);
+	UNUSED(v);
 	UNUSED(params);
 	UNUSED(width);
 	UNUSED(precision);
 	UNUSED(size);
+
 	return (writechar(c, f, params, width, precision, size));
 }
 /* task 0 */
@@ -33,6 +35,7 @@ int print_string(va_list v, char f[],
 	char *s = va_arg(v, char *);
 
 	UNUSED(f);
+	UNUSED(v);
 	UNUSED(params);
 	UNUSED(width);
 	UNUSED(precision);
@@ -81,6 +84,12 @@ int print_string(va_list v, char f[],
 int print_percent(va_list v, char f[],
 	int params, int width, int precision, int size)
 {
+	UNUSED(f);
+	UNUSED(v);
+	UNUSED(params);
+	UNUSED(width);
+	UNUSED(precision);
+	UNUSED(size);
 	return (write(1, "%%", 1));
 }
 
