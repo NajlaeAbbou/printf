@@ -9,21 +9,12 @@ int get_print(const char *handlerPrint, int *ind, va_list list, char buffer[],
 {
 	int i, len = 0, pc = -1;
 	hp hp_types[] = {
-		{'c', print_char},
-		{'s', print_string},
-		{'%', print_percent},
-		{'i', print_int},
-		{'d', print_int},
-		{'b', print_binary},
-		{'u', print_unsigned},
-		{'o', print_octal},
-		{'x', print_hexadecimal_lowercase},
-		{'X', print_hexadecimal_uppercase},
-		{'p', print_address},
-		{'S', print_UppercaseS},
-		{'r', print_reverse},
-		{'R', print_rot13},
-		{'\0', NULL}
+		{'c', print_char}, {'s', print_string},
+		{'%', print_percent}, {'i', print_int},
+		{'d', print_int}, {'b', print_binary},{'u', print_unsigned},
+		{'o', print_octal}, {'x', print_hexadecimal_lowercase},
+		{'X', print_hexadecimal_uppercase}, {'p', print_address},
+		{'S', print_UppercaseS}, {'r', print_reverse}, {'R', print_rot13}, {'\0', NULL}
 	};
 	for (i = 0; hp_types[i].handlerPrint != '\0'; i++)
 		if (handlerPrint[*ind] == hp_types[i].handlerPrint)

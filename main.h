@@ -22,42 +22,21 @@
 #define LONG 2
 #define SHORT 1
 
-/**
- * struct fmt - Struct op
- *
- * @fmt: The format.
- * @fn: The function associated.
-
-struct fmt
-{
-	char fmt;
-	int (*fn)(va_list, char[], int, int, int, int);
-};
-*/
 
 /**
  * struct handlerPrint - struct to choose the right function depending
  * on the format specifier passed to _printf()
- * @c: f specifier
- * @f: pointer to the printing function
+ * @handlerPrint: f specifier
+ * @fn: pointer to the printing function
  */
 struct handlerPrint
 {
 	char handlerPrint;
 	int (*fn)(va_list, char[], int, int, int, int);
-} ;
+};
 
 typedef struct handlerPrint hp;
 
-
-/**
- * typedef struct fmt fmt_t - Struct op
- *
- * @fmt: The format.
- * @fm_t: The function associated.
-
-typedef struct fmt fmt_t;
- */
 
 int _printf(const char *format, ...);
 int get_print(const char *c, int *i,
