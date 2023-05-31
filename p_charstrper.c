@@ -14,13 +14,7 @@ int print_char(va_list v, char f[],
 	int params, int width, int precision, int size)
 {
 	char c = va_arg(v, int);
-
-	UNUSED(f);
-	UNUSED(params);
-	UNUSED(width);
-	UNUSED(precision);
-	UNUSED(size);
-
+	
 	return (writechar(c, f, params, width, precision, size));
 }
 /* task 0 */
