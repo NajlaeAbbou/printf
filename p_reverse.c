@@ -5,6 +5,10 @@
  * print_reverse - prints string in reverse r
  * @v: va_list
  * @f: pointer flag
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: length of string
  */
 

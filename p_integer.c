@@ -5,6 +5,10 @@
  * print_integer - prints integer i and d
  * @v: va_list from _printf
  * @f: pointer to the struct flag
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: number of chararachers
  */
 

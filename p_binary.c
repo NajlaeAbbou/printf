@@ -5,6 +5,10 @@
  * print_binary - prints number in binary  b ( base 2)
  * @v: va_list
  * @f: pointer to flag struct
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: number of chars
  */
 int print_binary(va_list v, char f[],

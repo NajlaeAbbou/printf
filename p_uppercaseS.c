@@ -4,7 +4,11 @@
 /**
  * print_uppercaseS- print s in uppercase S
  * @v: va_
- * @f: pointer to flag
+ * @f: pointer to fla
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: number of chars
  */
 int print_UppercaseS(va_list v, char f[],

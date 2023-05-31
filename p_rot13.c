@@ -4,6 +4,10 @@
  * print_rot13 - pprint s using rot13 R
  * @v: va_list
  * @f: pointer to flag
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: length of string
  */
 

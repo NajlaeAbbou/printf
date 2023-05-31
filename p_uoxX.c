@@ -6,6 +6,10 @@
  * print_unsignednumber - prints unsigned integer u
  * @v: va_list
  * @f: pointer of flag
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: number of chars
  */
 
@@ -45,6 +49,10 @@ int print_unsigned(va_list v, char f[],
  * print_octal - prints a number in octal o (base 8)
  * @v: va_list
  * @f: pointer  flag
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: number of chars
  */
 
@@ -87,6 +95,10 @@ int print_octal(va_list v, char f[],
  * print_hexadecimal_lowercase- prints a number in hexadecimal x (base 16)
  * @v: va_list arguments
  * @f: pointer flag
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: number of chars
  */
 
@@ -101,6 +113,10 @@ int print_hexadecimal_lowercase(va_list v, char f[],
  * print_hexadecimal_uppercase - prints a number in hexadecimal X (base 16).
  * @v: va_list
  * @f: pointer flag
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: number of chars
  */
 int print_hexadecimal_uppercase(va_list v, char f[],
@@ -110,12 +126,16 @@ int print_hexadecimal_uppercase(va_list v, char f[],
 		params, 'X', width, precision, size));
 }
 
-/************** PRINT HEXX NUM IN LOWER OR UPPER **************/
 /**
  * printhexa - Prints a hexadecimal number in lower or upper
  * @v: Lista of arguments
  * @map_to: Array of values to map the number to
  * @f: f array to handle print
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
+ * @flag: nn
  * Return: Number of chars printed
  */
 int printhexa(va_list v, char map_to[], char f[],

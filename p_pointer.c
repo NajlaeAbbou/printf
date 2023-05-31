@@ -4,6 +4,10 @@
  * print_address - print adress p
  * @v: va_list
  * @f: pointer to glag
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: number of chars
  */
 int print_address(va_list v, char f[],
