@@ -4,6 +4,10 @@
  * print_char - fuction prit a char c
  * @v: va_list
  * @f: pointer struct flag
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: number of chars to print
  */
 int print_char(va_list v, char f[],
@@ -25,6 +29,10 @@ int print_char(va_list v, char f[],
  * print_string - a function prints all strings s
  * @v: va_list
  * @f: pointer to the struct flag
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: number of chars to print
  */
 int print_string(va_list v, char f[],
@@ -76,6 +84,10 @@ int print_string(va_list v, char f[],
  * print_percent - prints a percent
  * @v: va_list
  * @f: pointer
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: number of chars
  */
 

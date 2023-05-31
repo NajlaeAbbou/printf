@@ -4,6 +4,10 @@
  * writechar - Prints a string
  * @c: char types.
  * @f: f array to handle print
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: Number of chars printed.
  */
 int writechar(char c, char f[],
@@ -46,7 +50,10 @@ int writechar(char c, char f[],
  * @isnegative: Lista of arguments
  * @ind: char types.
  * @f: f array to handle print
-
+ * @params: xxx
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
  * Return: Number of chars printed.
  */
 int writenumber(int isnegative, int ind, char f[],
@@ -74,7 +81,12 @@ int writenumber(int isnegative, int ind, char f[],
  * writenum - Write a number using a bufffer
  * @ind: Index at which the number starts on the f
  * @f: f
- * @params: params
+ * @params: xxx
+ * @width: xxx
+ * @prec : xxx
+ * @length: sss
+ * @padd: cc
+ * @extra_c: xxx
  * Return: Number of printed chars.
  */
 int writenum(int ind, char f[],
@@ -129,6 +141,10 @@ int writenum(int ind, char f[],
  * @ind: Index at which the number starts in the f
  * @f: Array of chars
  * @params: params specifiers
+ * @width: xxx
+ * @precision :xxx
+ * @size: xxx
+ * @isnegative:test
  * Return: Number chars.
  */
 int writeunsgnd(int isnegative, int ind,
@@ -180,6 +196,12 @@ int writeunsgnd(int isnegative, int ind,
  * writeadress - Write a memory address
  * @f: Arrays of chars
  * @ind: Index at which the number starts in the f
+ * @params: xxx
+ * @width: xxx
+ * @length: cc
+ * @padd: cc
+ * @extra_c: ff
+ * @padd_start:aa
  * Return: Number of written chars.
  */
 int writeadress(char f[], int ind, int length,
