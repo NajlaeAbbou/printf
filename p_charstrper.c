@@ -1,53 +1,54 @@
 #include "main.h"
 
+/************************* PRINT CHAR *************************/
+
 /**
- * print_char - fuction prit a char c
- * @v: va_list
- * @f: pointer struct flag
- * Return: number of chars to print
+ * print_char - Prints a char
+ * @types: List a of arguments
+ * @buffer: Buffer array to handle print
+ * @flags:  Calculates active flags
+ * @width: Width
+ * @precision: Precision specification
+ * @size: Size specifier
+ * Return: Number of chars printed
  */
-int print_char(va_list v, char f[],
-	int params, int width, int precision, int size)
+int print_char(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
 {
-	char c = va_arg(v, int);
+	char c = va_arg(types, int);
 
-	UNUSED(f);
-	UNUSED(v);
-	UNUSED(params);
-	UNUSED(width);
-	UNUSED(precision);
-	UNUSED(size);
-
-	return (writechar(c, f, params, width, precision, size));
+	return (writechar(c, buffer, flags, width, precision, size));
 }
-/* task 0 */
-
+/************************* PRINT A STRING *************************/
 /**
- * print_string - a function prints all strings s
- * @v: va_list
- * @f: pointer to the struct flag
- * Return: number of chars to print
+ * print_string - Prints a string
+ * @types: List a of arguments
+ * @buffer: Buffer array to handle print
+ * @flags:  Calculates active flags
+ * @width: get width.
+ * @precision: Precision specification
+ * @size: Size specifier
+ * Return: Number of chars printed
  */
-int print_string(va_list v, char f[],
-	int params, int width, int precision, int size)
+int print_string(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
 {
 	int length = 0, i;
-	char *s = va_arg(v, char *);
+	char *str = va_arg(types, char *);
 
-	UNUSED(f);
-	UNUSED(v);
-	UNUSED(params);
+	UNUSED(buffer);
+	UNUSED(flags);
 	UNUSED(width);
 	UNUSED(precision);
 	UNUSED(size);
-	if (s == NULL)
+	if (str == NULL)
 	{
-		s = "(null)";
+		str = "(null)";
 		if (precision >= 6)
-			s = "      ";
+			str = "      ";
 	}
 
-	while (s[length] != '\0')
+	while (str[length] != '\0')
 		length++;
 
 	if (precision >= 0 && precision < length)
@@ -55,9 +56,9 @@ int print_string(va_list v, char f[],
 
 	if (width > length)
 	{
-		if (params & MINUS)
+		if (flags & MINUS)
 		{
-			write(1, &s[0], length);
+			write(1, &str[0], length);
 			for (i = width - length; i > 0; i--)
 				write(1, " ", 1);
 			return (width);
@@ -66,30 +67,32 @@ int print_string(va_list v, char f[],
 		{
 			for (i = width - length; i > 0; i--)
 				write(1, " ", 1);
-			write(1, &s[0], length);
+			write(1, &str[0], length);
 			return (width);
 		}
 	}
 
-	return (write(1, s, length));
+	return (write(1, str, length));
 }
-
+/************************* PRINT PERCENT SIGN *************************/
 /**
- * print_percent - prints a percent
- * @v: va_list
- * @f: pointer
- * Return: number of chars
+ * print_percent - Prints a percent sign
+ * @types: Lista of arguments
+ * @buffer: Buffer array to handle print
+ * @flags:  Calculates active flags
+ * @width: get width.
+ * @precision: Precision specification
+ * @size: Size specifier
+ * Return: Number of chars printed
  */
-
-int print_percent(va_list v, char f[],
-	int params, int width, int precision, int size)
+int print_percent(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
 {
-	UNUSED(f);
-	UNUSED(v);
-	UNUSED(params);
+	UNUSED(types);
+	UNUSED(buffer);
+	UNUSED(flags);
 	UNUSED(width);
 	UNUSED(precision);
 	UNUSED(size);
 	return (write(1, "%%", 1));
 }
-
