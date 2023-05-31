@@ -1,7 +1,14 @@
 #include "main.h"
 /**
  * get_print - select the right _printf function
- * @s: character specifier
+ * @handlerPrint: character specifier
+ * @ind: bb
+ * @list: ff
+ * @buffer: hh
+ * @flags: ff
+ * @width: ff
+ * @precision: bb
+ * @size: vf
  * Return: 1 or 2;
  */
 int get_print(const char *handlerPrint, int *ind, va_list list, char buffer[],

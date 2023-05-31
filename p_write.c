@@ -137,24 +137,20 @@ int writenum(int ind, char f[],
 
 /**
  * writeunsgnd - Writes an unsigned number
- * @is_negative: Number indicating if the num is negative
  * @ind: Index at which the number starts in the f
  * @f: Array of chars
  * @params: params specifiers
  * @width: xxx
  * @precision :xxx
  * @size: xxx
- * @isnegative:test
  * Return: Number chars.
  */
-int writeunsgnd(int isnegative, int ind,
-	char f[],
-	int params, int width, int precision, int size)
+int writeunsgnd(int ind, char f[],
+		int params, int width, int precision, int size)
 {
 	int length = BUFF_SIZE - ind - 1, i = 0;
 	char padd = ' ';
 
-	UNUSED(isnegative);
 	UNUSED(size);
 
 	if (precision == 0 && ind == BUFF_SIZE - 2 && f[ind] == '0')

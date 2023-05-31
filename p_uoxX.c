@@ -36,7 +36,7 @@ int print_unsigned(va_list v, char f[],
 
 	i++;
 
-	return (writeunsgnd(0, i, f, params, width, precision, size));
+	return (writeunsgnd(i, f, params, width, precision, size));
 }
 
 /*task 3 o */
@@ -80,7 +80,7 @@ int print_octal(va_list v, char f[],
 
 	i++;
 
-	return (writeunsgnd(0, i, f, params, width, precision, size));
+	return (writeunsgnd(i, f, params, width, precision, size));
 }
 
 /**
@@ -152,7 +152,7 @@ int printhexa(va_list v, char map_to[], char f[],
 
 	i++;
 
-	return (writeunsgnd(0, i, f, params, width, precision, size));
+	return (writeunsgnd(i, f, params, width, precision, size));
 }
 
 

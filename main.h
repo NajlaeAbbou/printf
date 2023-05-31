@@ -100,7 +100,7 @@ int writenum(int ind, char bff[], int params, int width, int precision,
 	int length, char padd, char extra_c);
 int writeadress(char buffer[], int ind, int length,
 	int width, int params, char padd, char extra_c, int padd_start);
-int writeunsgnd(int is_negative, int ind,
+int writeunsgnd(int ind,
 char buffer[],
 	int params, int width, int precision, int size);
 int _isprintable(char);
